@@ -7,8 +7,8 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/corykitchens/sledger/pkg/sledger"
 	"github.com/spf13/cobra"
-	"meganruggiero.com/sledger/pkg/sledger"
 )
 
 // applyCmd represents the apply command

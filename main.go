@@ -1,8 +1,8 @@
 package main
 
 import (
+	"github.com/corykitchens/sledger/cmd"
 	_ "github.com/lib/pq"
-	"meganruggiero.com/sledger/cmd"
 )
 
 func main() {
