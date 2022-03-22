@@ -1,4 +1,4 @@
-package main
+package sledger
 
 import (
 	"database/sql"
@@ -7,29 +7,13 @@ import (
 	"io/ioutil"
 	"os"
 
-	_ "github.com/lib/pq"
 	"gopkg.in/yaml.v2"
 )
 
-type (
-	sledger struct {
-		Sledger []struct {
-			Forward  string
-			Backward string
-		}
-	}
-
-	rollback struct {
-		index      int
-		dbBackward string
-	}
-)
-
-const (
-	SLEDGER_VERSION = "a45a9821-8e0d-4126-8d99-0543e7f1f8f7"
-)
-
-func main() {
+func SayHello() string {
+	return fmt.Sprintf("Hello World")
+}
+func Run() {
 	path := flag.String("ledger", "sledger.yaml", "path within git repository to sledger file")
 	database := flag.String("database", "postgresql://localhost", "URL of database to update")
 	flag.Parse()
